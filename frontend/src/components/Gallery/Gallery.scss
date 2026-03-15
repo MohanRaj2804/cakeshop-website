@@ -1,0 +1,16 @@
+.gallery-item {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.05);
+        
+        img {
+            filter: brightness(1.1);
+        }
+    }
+    
+    img {
+        transition: filter 0.3s ease;
+    }
+}

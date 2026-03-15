@@ -1,0 +1,158 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/bootstrap";
+
+$txt-color: #fff;
+$pink: #eaa2c6;
+$pink-2: #da0a72;
+$chocolate: chocolate;
+$bg-image: url('../../assets/bg-1.jpg');
+$bg-color: #dcdeed;
+$card-color:#f6f2fa;
+
+.txt-color {
+    color: $txt-color !important;
+}
+.bg-clr{
+    background-color: $bg-color !important;
+}
+.bg-white{
+    background-color: white !important;
+}
+.card-bg-clr {
+  
+  background-color: #ffe8e8; // gentle hover tint
+  border-bottom: 3px solid #c8c6e5; // light lavender accent
+  color: #3e2723;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #fff9f3; // soft cream for contrast
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.h-btn {
+    background-color: white;
+    color: $pink;
+    border: 1px solid $pink;
+    padding: 8px;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $pink;
+        color: white;
+        border: 1px solid $pink;
+    }
+}
+
+.h-btn-2 {
+
+    background-color: $pink;
+    color: white;
+    border: 1px solid $pink;
+    padding: 8px;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: white;
+        color: $pink;
+        border: 1px solid $pink;
+
+    }
+}
+
+.bg-img{
+    background-image: $bg-image;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.m-left{
+    margin-left: 100px;
+}
+
+.card-hover:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+.btn-clr{
+    background-color: $txt-color !important;
+    color: $pink !important;
+    border-color: $pink !important;
+    &:hover{
+        background-color: $pink !important;
+        color: $txt-color !important;
+        border-color: $pink !important;
+    }
+}
+.try-now{
+    color: $chocolate !important;
+    &:hover{
+        color: darken(rgb(243, 138, 62), 10%) !important;
+    }
+}
+
+.bg-clr {
+  background: linear-gradient(135deg, #fff5f8 0%, #fff 100%);
+}
+
+.text-color {
+  color: #c2185b; // soft pink-red tone for headings
+}
+
+.btn-clr {
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #e91e63;
+    transform: scale(1.05);
+  }
+}
+
+.card-bg-clr {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.transition-card {
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.try-now {
+  color: #ff4081;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #e91e63;
+  }
+}
+.thm-color{ 
+    color: $chocolate !important;
+    border-color: $chocolate !important;
+    &:hover{
+        
+        color: white !important;
+        background-color: $chocolate !important;
+        border-color: $chocolate !important;
+    }
+}
+
+@media (max-width: 576px) {
+  .text-section {
+    text-align: center;
+  }
+
+  .btn-clr {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,198 @@
+/* ===============================
+   GLOBAL SECTION STYLING
+================================= */
+.shop-page {
+  background: linear-gradient(135deg, #fff5f7, #ffe8ec);
+}
+
+/* ===============================
+   CAROUSEL
+================================= */
+.carousel-img {
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   PREMIUM CARD
+================================= */
+.premium-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.premium-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGE WRAPPER */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.08);
+}
+
+/* BADGE */
+.premium-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ===============================
+   BUTTON STYLING
+================================= */
+.btn-dark {
+  border-radius: 30px;
+  padding: 10px 0;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-dark:hover {
+  background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
+  border: none;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4);
+}
+
+/* ===============================
+   SIGNATURE SECTION
+================================= */
+.signature-section {
+  background: linear-gradient(135deg, #ffffff, #fff0f3);
+  border-radius: 30px;
+  margin: 60px 0;
+  padding: 60px 20px;
+}
+
+/* IMAGE */
+.signature-img-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.signature-img {
+  transition: transform 0.6s ease;
+}
+
+.signature-img:hover {
+  transform: scale(1.07);
+}
+
+/* BADGE */
+.signature-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* CONTENT */
+.signature-content h2 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.signature-tag {
+  color: #ff4d6d;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* PRICE SECTION */
+.signature-price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1rem;
+}
+
+.discount-price {
+  color: #ff4d6d;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.save-badge {
+  background: #ffe5ec;
+  color: #ff4d6d;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* FEATURES */
+.signature-feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.signature-feature i {
+  color: #ff4d6d;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* SIGNATURE BUTTON */
+.signature-btn {
+  background: linear-gradient(135deg, #ff4d6d, #ff8fa3);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.signature-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(255, 77, 109, 0.4);
+}
+
+/* ===============================
+   DROPDOWN
+================================= */
+.form-select {
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: #ff4d6d;
+  box-shadow: 0 0 0 0.2rem rgba(255, 77, 109, 0.25);
+}

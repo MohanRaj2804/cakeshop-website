@@ -1,0 +1,18 @@
+$pink: #eaa2c6;
+$txt-color: #fff;
+.abt-btn-clr{
+     background-color: $txt-color !important;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+
+    &:hover {
+        background-color:  $pink !important;
+        color: $txt-color !important;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba($pink, 0.3);
+    }
+}

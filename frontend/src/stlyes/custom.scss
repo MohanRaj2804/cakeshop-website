@@ -1,0 +1,10 @@
+// Import Bootstrap functions and variables first
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+// Customize Bootstrap variables
+$primary: #f06292; // pinkish for cakes
+$secondary: #ffe0b2; // light cream
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";

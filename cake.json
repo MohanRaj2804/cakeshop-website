@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Chocolate Fudge Cake",
+    "description": "Rich chocolate cake layered with creamy fudge frosting.",
+    "image": "http://localhost:5000/images/chocolate-fudge.jpg",
+    "priceVariants": [
+      { "label": "500g", "price": 450 },
+      { "label": "1kg", "price": 850 }
+    ]
+  },
+  {
+    "title": "Strawberry Cream Cake",
+    "description": "Soft vanilla sponge with fresh strawberries and whipped cream.",
+    "image": "http://localhost:5000/images/strawberry-cream.jpg",
+    "priceVariants": [
+      { "label": "500g", "price": 500 },
+      { "label": "1kg", "price": 950 }
+    ]
+  },
+  {
+    "title": "Red Velvet Cake",
+    "description": "Classic red velvet cake with smooth cream cheese frosting.",
+    "image": "http://localhost:5000/images/red-velvet.jpg",
+    "priceVariants": [
+      { "label": "500g", "price": 550 },
+      { "label": "1kg", "price": 1000 }
+    ]
+  },
+  {
+    "title": "Black Forest Cake",
+    "description": "Chocolate sponge layered with cherries and whipped cream.",
+    "image": "http://localhost:5000/images/black-forest.jpg",
+    "priceVariants": [
+      { "label": "500g", "price": 480 },
+      { "label": "1kg", "price": 900 }
+    ]
+  },
+  {
+    "title": "Rainbow Celebration Cake",
+    "description": "Colorful layered cake perfect for birthdays and celebrations.",
+    "image": "http://localhost:5000/images/rainbow.jpg",
+    "priceVariants": [
+      { "label": "500g", "price": 600 },
+      { "label": "1kg", "price": 1100 }
+    ]
+  },
+  {
+    "title": "Cookies & Cream Cake",
+    "description": "Moist chocolate cake loaded with crushed cookies and cream frosting.",
+    "image": "http://localhost:5000/images/cookies-cream.jpg",
+    "priceVariants": [
+      { "label": "500g", "price": 520 },
+      { "label": "1kg", "price": 980 }
+    ]
+  }
+]

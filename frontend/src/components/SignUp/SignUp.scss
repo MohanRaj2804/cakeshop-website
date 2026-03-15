@@ -1,0 +1,48 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/bootstrap";
+
+$txt-color: white;
+$pink: #eaa2c6;
+$pink-2: #da0a72;
+$primary: #ff6fa5;
+$chocolate: chocolate;
+$bg-image: url('../../assets/bg-1.jpg');
+$bg-color: #dcdeed;
+$card-color: #f6f2fa;
+$bg-image: url('../../assets/bg-img-3.jpg');
+
+.btn-clr-3 {
+    background-color: $primary;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+
+    &:hover {
+        background-color: $txt-color;
+        color: $primary;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba($primary, 0.3);
+    }
+}
+
+.bg-img-contact {
+    background-image: $bg-image !important;
+    --bsb-overlay-opacity: "0.7";
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.bg-clr-1{
+    border: 1px solid black !important;
+    &:hover{
+        background-color: $primary !important;
+        color: $txt-color !important;
+        border: none !important;
+        
+    }
+}
