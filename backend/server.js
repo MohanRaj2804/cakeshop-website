@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 
 // Middleware: Enable CORS for frontend communication
-const allowedOrigins = ['http://localhost:5173', 'http://localhost:3000'];
+const allowedOrigins = ['http://localhost:5173', 'http://localhost:3000', 'https://cakeshop-website-backend.onrender.com'];
 if (process.env.FRONTEND_URL) {
   allowedOrigins.push(process.env.FRONTEND_URL);
 }
