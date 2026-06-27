@@ -1,59 +1,58 @@
 # 🎂 Butter Bliss — Cake Shop E-Commerce Web Application
 
-A full-stack e-commerce web application for a cake shop named **Butter Bliss**, built with the MERN stack. Features product browsing with weight/price variants, cart management, order placement, and secure JWT-based authentication.
+A full-stack e-commerce web application for a cake shop called **Butter Bliss**, built with the MERN stack. Users can browse handcrafted cakes, view product details with pricing variants, and securely sign in to place orders.
 
 ## 🔗 Live Demo
 
-- **Frontend:** [cakeshop-by-mohan.netlify.app](https://cakeshop-by-mohan.netlify.app)
-- **Backend API:** [cakeshop-website-backend.onrender.com](https://cakeshop-website-backend.onrender.com)
-
-> ⚠️ The backend is hosted on Render's free tier — it may take 30–60 seconds to wake up on first load.
+| Layer | Link |
+|-------|------|
+| 🌐 Frontend | [cakeshop-by-mohan.netlify.app](https://cakeshop-by-mohan.netlify.app) |
+| ⚙️ Backend API | [cakeshop-website-backend.onrender.com](https://cakeshop-website-backend.onrender.com) |
 
 ---
 
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots/screenshot-home.png)
 
-### 🛍️ Product Listing — Premium Cake Collection
-![Cake Listing](./screenshots/cake-listing.png)
+### 🛍️ Product Highlights
+![Product Highlights](./screenshots/screenshot-products.png)
 
-### 🎂 Featured Product — Chef's Signature Cake
-![Product Detail](./screenshots/product-detail.png)
+### 🍫 Chef's Signature Cake
+![Chef's Signature Cake](./screenshots/screenshot-Chef's%20Signature%20Cake.png)
 
 ### 🔐 Sign In Page
-![Sign In](./screenshots/signin.png)
+![Sign In](./screenshots/screenshot-signin.png)
 
 ### 📝 Sign Up Page
-![Sign Up](./screenshots/signup.png)
+![Sign Up](./screenshots/screenshot-signup.png)
 
 ---
 
 ## ✨ Features
 
-- 🏠 Landing page with hero section and featured cake highlights
-- 🎂 Premium cake collection with product cards, star ratings, and "Best Seller" badges
-- ⚖️ Weight/size variants with dynamic pricing (500g, 1kg, etc.)
-- 👨‍🍳 Chef's Signature limited-edition product section
+- 🏠 Landing page with hero banner and featured cake sections
+- 🎂 Premium cake collection with **Best Seller** badges and weight/price variants
+- 🍫 Chef's Signature product detail page with discount pricing
 - 🛒 Add to cart and order management
-- 🔐 Secure Sign In / Sign Up with JWT authentication and bcrypt password hashing
-- 🔒 Protected routes — only authenticated users can place orders
+- 🔐 JWT-based authentication — Sign In / Sign Up
+- 🔒 Protected routes — only logged-in users can place orders
 - 📡 12+ RESTful API endpoints for products, cart, and orders
-- 📱 Fully responsive design across all screen sizes
+- 📱 Fully responsive design across all devices
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer     | Technology                                        |
-|-----------|---------------------------------------------------|
-| Frontend  | React.js, TypeScript, Vite, Bootstrap, CSS3       |
-| Backend   | Node.js, Express.js                               |
-| Database  | MongoDB, Mongoose                                 |
-| Auth      | JWT (JSON Web Tokens), bcrypt                     |
-| Dev Tools | Postman, ESLint, Git, VS Code                     |
-| Deployed  | Netlify (frontend), Render (backend)              |
+| Layer     | Technology                                      |
+|-----------|-------------------------------------------------|
+| Frontend  | React.js, TypeScript, Vite, Bootstrap, CSS3     |
+| Backend   | Node.js, Express.js                             |
+| Database  | MongoDB, Mongoose                               |
+| Auth      | JWT (JSON Web Tokens), bcrypt                   |
+| Dev Tools | Postman, ESLint, Git, VS Code                   |
+| Deployed  | Netlify (frontend), Render (backend)            |
 
 ---
 
@@ -69,18 +68,21 @@ cakeshop-website/
 │   ├── routes/             # Express API routes
 │   ├── scripts/            # Utility / seed scripts
 │   ├── .env.example        # Environment variable template
-│   ├── .eslintrc.json
 │   └── server.js           # Entry point
 │
-└── frontend/
-    ├── public/             # Static assets
-    ├── src/                # React components, pages, hooks
-    ├── dist/               # Production build output
-    ├── .env.example        # Environment variable template
-    ├── eslint.config.js
-    ├── index.html
-    ├── tsconfig.json
-    └── vercel.json
+├── frontend/
+│   ├── public/             # Static assets
+│   ├── src/                # React components, pages, hooks
+│   ├── index.html          # HTML entry point
+│   ├── tsconfig.json       # TypeScript config
+│   └── vercel.json         # Deployment config
+│
+└── screenshots/
+    ├── screenshot-home.png
+    ├── screenshot-products.png
+    ├── screenshot-Chef's Signature Cake.png
+    ├── screenshot-signin.png
+    └── screenshot-signup.png
 ```
 
 ---
@@ -103,7 +105,7 @@ cd backend
 npm install
 ```
 
-Create a `.env` file (refer to `.env.example`):
+Copy `.env.example` to `.env` and fill in your values:
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
@@ -120,7 +122,7 @@ cd ../frontend
 npm install
 ```
 
-Create a `.env` file (refer to `.env.example`):
+Copy `.env.example` to `.env` and fill in:
 ```env
 VITE_API_URL=http://localhost:5000
 ```
@@ -158,13 +160,13 @@ App runs at `http://localhost:5173`
 - [ ] Payment gateway integration (Razorpay)
 - [ ] Product search and filter by category
 - [ ] Email confirmation on order placement
-- [ ] Review and rating system
+- [ ] Customer reviews and ratings
 
 ---
 
 ## 👨‍💻 Author
 
 **Mohan Raj V**
-- GitHub: [@MohanRaj2804](https://github.com/MohanRaj2804)
-- LinkedIn: [linkedin.com/in/mohan-rajv](https://linkedin.com/in/mohan-rajv)
-- Email: mohanraj171810@gmail.com
+- 🐙 GitHub: [@MohanRaj2804](https://github.com/MohanRaj2804)
+- 💼 LinkedIn: [linkedin.com/in/mohan-rajv](https://linkedin.com/in/mohan-rajv)
+- 📧 Email: mohanraj171810@gmail.com
