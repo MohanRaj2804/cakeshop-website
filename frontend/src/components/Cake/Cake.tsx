@@ -15,7 +15,6 @@ import CookiesCreamCake from '../../assets/Cookies-Cream-Cake.jpg';
 import MangoMagic from '../../assets/Mango-Magic.jpg';
 import PistachioRoyale from '../../assets/Pistachio-Royale.jpg';
 import RaspberryRomance from '../../assets/Raspberry-Romance.jpg';
-import { Link } from 'react-router-dom';
 import ChocoBerry from '../../assets/ChocoBerry_Lava_Dome.jpg';
 
 const cakeImages: { [key: string]: string } = {
