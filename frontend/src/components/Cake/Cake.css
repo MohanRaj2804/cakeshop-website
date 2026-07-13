@@ -179,6 +179,41 @@
   box-shadow: 0 0 0 0.2rem rgba(255, 77, 109, 0.25);
 }
 
+/* Buttons */
+.premium-btn {
+  background: linear-gradient(90deg, #ff6b7a, #ff4d6d);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.9rem;
+  font-weight: 700;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.18s ease;
+}
+
+.buy-now-btn:hover {
+  background: linear-gradient(90deg, #ff4d6d, #ff2b4a);
+}
+
+.add-cart-btn {
+  background: #fff;
+  color: #ff4d6d;
+  border: 1px solid rgba(255, 77, 109, 0.16);
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.9rem;
+  font-weight: 700;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+
+.add-cart-btn:hover {
+  background: rgba(255, 77, 109, 0.06);
+  transform: translateY(-2px);
+}
+
+.d-flex.gap-2 .premium-btn,
+.d-flex.gap-2 .add-cart-btn {
+  min-width: 48%;
+}
+
 @media (max-width: 767.98px) {
   .shop-page {
     padding-block: 2rem;

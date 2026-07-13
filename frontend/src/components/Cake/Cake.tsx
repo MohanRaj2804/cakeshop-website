@@ -247,38 +247,65 @@ function Cake() {
                       <div className="d-flex justify-content-between align-items-center mb-3">
                         <div>
                           <p className="text-muted small mb-1">Starting at</p>
-                          <h4 className="text-primary fw-bold mb-0">
+                          <h4 className="fw-bold mb-0">
                             ₹{selectedSize[cake._id]}
                           </h4>
                         </div>
                         <span className="price-pill">Premium</span>
                       </div>
 
-                      <button
-                        className="premium-btn w-100"
-                        type="button"
-                        onClick={() => {
-                          const selectedPrice = selectedSize[cake._id] || cake.priceVariants?.[0]?.price || 0;
-                          const selectedVariant = cake.priceVariants?.find((variant) => variant.price === selectedPrice);
+                      <div className="d-flex gap-2 align-items-center">
+                        <button
+                          className="add-cart-btn flex-grow-1"
+                          type="button"
+                          onClick={() => {
+                            const selectedPrice = selectedSize[cake._id] || cake.priceVariants?.[0]?.price || 0;
+                            const selectedVariant = cake.priceVariants?.find((variant) => variant.price === selectedPrice);
 
-                          addCartItem({
-                            id: `${cake._id}-${selectedVariant?.label || 'default'}`,
-                            cakeId: cake._id,
-                            title: cake.title,
-                            size: selectedVariant?.label || 'Standard',
-                            price: selectedPrice,
-                            quantity: 1,
-                            note: cake.description || '',
-                            badge: 'Premium',
-                          });
+                            addCartItem({
+                              id: `${cake._id}-${selectedVariant?.label || 'default'}`,
+                              cakeId: cake._id,
+                              title: cake.title,
+                              size: selectedVariant?.label || 'Standard',
+                              price: selectedPrice,
+                              quantity: 1,
+                              note: cake.description || '',
+                              badge: 'Premium',
+                            });
 
-                          setMessage(`${cake.title} added to cart`);
-                          setTimeout(() => setMessage(''), 2500);
-                          navigate('/cart');
-                        }}
-                      >
-                        🛒 Buy Now
-                      </button>
+                            setMessage(`${cake.title} added to cart`);
+                            setTimeout(() => setMessage(''), 2500);
+                          }}
+                        >
+                        Add to Cart
+                        </button>
+
+                        <button
+                          className="premium-btn buy-now-btn"
+                          type="button"
+                          onClick={() => {
+                            const selectedPrice = selectedSize[cake._id] || cake.priceVariants?.[0]?.price || 0;
+                            const selectedVariant = cake.priceVariants?.find((variant) => variant.price === selectedPrice);
+
+                            addCartItem({
+                              id: `${cake._id}-${selectedVariant?.label || 'default'}`,
+                              cakeId: cake._id,
+                              title: cake.title,
+                              size: selectedVariant?.label || 'Standard',
+                              price: selectedPrice,
+                              quantity: 1,
+                              note: cake.description || '',
+                              badge: 'Premium',
+                            });
+
+                            setMessage(`${cake.title} added to cart`);
+                            setTimeout(() => setMessage(''), 2500);
+                            navigate('/cart');
+                          }}
+                        >
+                          🛒 Buy Now
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

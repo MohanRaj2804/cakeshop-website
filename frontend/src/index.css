@@ -119,3 +119,63 @@ button,
   outline: 3px solid rgba(212, 175, 55, 0.4);
   outline-offset: 2px;
 }
+
+/* Project-wide responsive breakpoints and helpers */
+
+/* Large desktops */
+@media (max-width: 1400px) {
+  :root {
+    --container-width: min(1100px, calc(100% - 2rem));
+  }
+}
+
+/* Desktops / small laptops */
+@media (max-width: 1200px) {
+  :root {
+    --container-width: min(1000px, calc(100% - 2rem));
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  html { font-size: 15px; }
+  .container { padding-inline: 1rem; }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+  .container { padding-inline: 0.75rem; }
+
+  /* Make card footer buttons stack on small screens */
+  .d-flex.gap-2 {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .d-flex.gap-2 .premium-btn,
+  .d-flex.gap-2 .add-cart-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .carousel-img { height: 260px; }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  html { font-size: 13px; }
+  .container { padding-inline: 0.6rem; }
+
+  .carousel-img { height: 200px; }
+  .card .card-img-top { height: 180px; }
+  .signature-section { padding: 1.2rem; }
+
+  /* Tighten spacing on very small devices */
+  .shop-page { padding-block: 1.5rem; }
+}
+
+/* Utility: make images fluid everywhere */
+img, .img-fluid { max-width: 100%; height: auto; }
+
+/* Finished responsive adjustments */
