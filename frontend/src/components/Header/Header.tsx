@@ -1,5 +1,6 @@
 import "./Header.css";
 import { Link, NavLink } from "react-router-dom";
+import ShoppingCartLogo from '../../assets/Shopping_Cart.jpg.png';
 
 const navItems = [
     { to: "/", label: "Home", end: true },
@@ -46,9 +47,7 @@ function Header() {
 
                     <div className="d-flex gap-3 align-items-center icon-group">
                         <Link className="icon-btn" to="/cart" aria-label="View cart">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M7 6h15l-1.5 8.5a2 2 0 0 1-2 1.5H9.5a2 2 0 0 1-2-1.6L6.5 3H3V1H1v3h2l1.5 8.5a2 2 0 0 0 2 1.6h10.5a2 2 0 0 0 2-1.5l1-5.5H8.5" />
-                            </svg>
+                            <img src={ShoppingCartLogo} alt="Cart" className="cart-logo" />
                         </Link>
                         <Link className="btn btn-dark rounded-pill px-4 signin-btn" to="/signin">
                             Sign In

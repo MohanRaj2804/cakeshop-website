@@ -112,9 +112,10 @@
 }
 
 .icon-btn:hover {
-  background: rgba(248, 187, 208, 0.28);
+  background: none;
   color: var(--bb-hover);
   transform: translateY(-1px);
+  border: 1px solid var(--bb-border);
 }
 
 .signin-btn {

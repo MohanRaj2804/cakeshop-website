@@ -68,12 +68,12 @@ function Home() {
             <div className="col-12">
               <div className="featured-grid">
                 {[
-                  { src: ChocolateFudgeCake, title: "Chocolate Fudge Cake", desc: "Rich, moist chocolate layers topped with decadent fudge frosting for the ultimate chocolate lover's delight." },
-                  { src: StrawberryCreamCake, title: "Strawberry Cream Cake", desc: "Fresh strawberries and airy cream layered over soft sponge for a refreshing, fruity treat." },
-                  { src: RedVelvetCake, title: "Red Velvet Cake", desc: "Classic red velvet with silky cream cheese frosting, perfect for birthdays and anniversaries." },
-                  { src: BlackForestCake, title: "Black Forest Cake", desc: "Layers of chocolate sponge, cherries, and whipped cream — a timeless indulgence." },
-                  { src: MangoMagic, title: "Mango Magic", desc: "A tropical delight with fresh mango pieces and creamy coconut frosting." },
-                  { src: RainbowCake, title: "Rainbow Celebration Cake", desc: "Colorful layers and playful frosting make it perfect for joyful celebrations." }
+                  { src: ChocolateFudgeCake, title: "Chocolate Fudge Cake", desc: "Rich, moist chocolate layers topped with decadent fudge frosting for the ultimate chocolate lover's delight.", price: 850, size: "1kg" },
+                  { src: StrawberryCreamCake, title: "Strawberry Cream Cake", desc: "Fresh strawberries and airy cream layered over soft sponge for a refreshing, fruity treat.", price: 500, size: "500g" },
+                  { src: RedVelvetCake, title: "Red Velvet Cake", desc: "Classic red velvet with silky cream cheese frosting, perfect for birthdays and anniversaries.", price: 780, size: "1kg" },
+                  { src: BlackForestCake, title: "Black Forest Cake", desc: "Layers of chocolate sponge, cherries, and whipped cream — a timeless indulgence.", price: 820, size: "1kg" },
+                  { src: MangoMagic, title: "Mango Magic", desc: "A tropical delight with fresh mango pieces and creamy coconut frosting.", price: 760, size: "1kg" },
+                  { src: RainbowCake, title: "Rainbow Celebration Cake", desc: "Colorful layers and playful frosting make it perfect for joyful celebrations.", price: 900, size: "1kg" }
                 ].map((cake) => (
                   <div key={cake.title}>
                     <div className="card border-0 shadow-sm h-100 card-bg-clr rounded-4 transition-card">
@@ -85,20 +85,15 @@ function Home() {
                         />
                         <h5 className="fw-bold mb-2">{cake.title}</h5>
                         <p className="text-secondary small mb-3">{cake.desc}</p>
+                        <div className="d-flex justify-content-center align-items-center gap-3 mb-3">
+                          <span className="badge bg-light text-dark py-2 px-3">{cake.size}</span>
+                          <span className="fw-bold text-primary">₹{cake.price}</span>
+                        </div>
                         <Link
                           to="/cake"
-                          className="fw-bold text-decoration-none try-now d-inline-flex align-items-center gap-1"
+                          className="btn premium-btn w-100"
                         >
-                          Try Now
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                            className="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                            <path fillRule="evenodd"
-                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146
-                        5.354a.5.5 0 1 1 .708-.708l3
-                        3a.5.5 0 0 1 0 .708l-3
-                        3a.5.5 0 0 1-.708-.708L10.293
-                        8.5H4.5A.5.5 0 0 1 4 8z" />
-                          </svg>
+                          Order Now
                         </Link>
                       </div>
                     </div>

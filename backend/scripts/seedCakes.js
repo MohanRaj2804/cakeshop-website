@@ -69,6 +69,15 @@ const cakes = [
     ]
   },
   {
+    title: 'Pistachio Royale Cake',
+    description: 'Premium pistachio cream layered between soft vanilla sponge.',
+    image: null,
+    priceVariants: [
+      { label: '500g', price: 599 },
+      { label: '1kg', price: 1199 }
+    ]
+  },
+  {
     title: 'ChocoBerry Lava Dome',
     description: 'Molten chocolate centre with tangy berry compote.',
     image: null,

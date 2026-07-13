@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import connectDB from './config/DB.js';
 import authRoutes from './routes/auth.js';
 import cakeRoutes from './routes/cake.js';
+import orderRoutes from './routes/order.js';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -32,6 +33,7 @@ connectDB();
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/cakes', cakeRoutes);
+app.use('/api/orders', orderRoutes);
 
 // Root route - test if server is running
 app.get('/', (req, res) => res.send('Cake shop backend is running'));

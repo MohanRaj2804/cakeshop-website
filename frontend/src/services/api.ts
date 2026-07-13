@@ -38,6 +38,16 @@ export const getCakes = async () => {
   return res.data;
 };
 
-export const apiClient = { register, login, getProfile, getCakes };
+export const createOrder = async (data: { items: any[]; delivery?: number }) => {
+  const res = await api.post('/orders', data);
+  return res.data;
+};
+
+export const getOrders = async () => {
+  const res = await api.get('/orders');
+  return res.data;
+};
+
+export const apiClient = { register, login, getProfile, getCakes, createOrder, getOrders };
 
 export default apiClient;
