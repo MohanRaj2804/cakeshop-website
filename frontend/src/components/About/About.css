@@ -1,0 +1,39 @@
+.abt-btn-clr {
+  background: linear-gradient(135deg, #5d4037, #4e342e) !important;
+  color: #fff!important;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 999px;
+  min-height: 46px;
+}
+
+.abt-btn-clr:hover {
+  background: linear-gradient(135deg, #eaa2c6, #d98cb1) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(234, 162, 198, 0.25);
+}
+
+.about-section .lead {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+.about-section .icon-list {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.about-section img {
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 48px rgba(93, 64, 55, 0.12);
+}
+
+@media (max-width: 575.98px) {
+  .abt-btn-clr {
+    width: 100%;
+  }
+}

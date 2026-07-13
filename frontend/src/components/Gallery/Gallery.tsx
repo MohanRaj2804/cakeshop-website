@@ -1,4 +1,4 @@
-import './Gallery.scss';
+import './Gallery.css';
 import slide1 from '../../assets/slide_1.jpg';
 import slide2 from '../../assets/slide_2.jpg';
 import slide3 from '../../assets/slide_3.jpg';

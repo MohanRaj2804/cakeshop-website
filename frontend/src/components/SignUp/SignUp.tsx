@@ -1,3 +1,4 @@
+import './SignUp.css';
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import api from '../../services/api';

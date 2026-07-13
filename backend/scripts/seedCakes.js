@@ -60,6 +60,15 @@ const cakes = [
     ]
   },
   {
+    title: 'Mango Magic Cake',
+    description: 'Tropical mango cake with luscious cream and fruity flavor.',
+    image: null,
+    priceVariants: [
+      { label: '500g', price: 599 },
+      { label: '1kg', price: 1099 }
+    ]
+  },
+  {
     title: 'ChocoBerry Lava Dome',
     description: 'Molten chocolate centre with tangy berry compote.',
     image: null,

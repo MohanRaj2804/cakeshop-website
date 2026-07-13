@@ -1,0 +1,11 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --bs-primary: #f06292;
+  --bs-secondary: #ffe0b2;
+}
+
+body {
+  background-color: #fffdf8;
+  color: #3e2723;
+}

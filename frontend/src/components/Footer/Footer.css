@@ -1,0 +1,57 @@
+footer.border-top {
+  border-top: 1px solid var(--bb-border) !important;
+  background: linear-gradient(135deg, #fff9f2, #fff3f6);
+  border-radius: 1.25rem 1.25rem 0 0;
+  padding: 1.25rem 1.5rem;
+}
+
+footer .text-body-secondary {
+  font-size: 0.95rem;
+  color: var(--bb-text) !important;
+  font-weight: 500;
+}
+
+footer .nav-link {
+  color: var(--bb-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.7rem;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+footer .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  bottom: 0.15rem;
+  height: 2px;
+  width: 0;
+  margin: 0 auto;
+  background: linear-gradient(90deg, var(--bb-highlight), var(--bb-primary));
+  transition: width 0.3s ease;
+}
+
+footer .nav-link:hover {
+  color: var(--bb-hover);
+}
+
+footer .nav-link:hover::after {
+  width: calc(100% - 1.4rem);
+}
+
+footer .nav-link.active {
+  color: var(--bb-hover);
+  font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+  footer.border-top {
+    padding: 1rem;
+  }
+
+  footer .nav-link {
+    padding-inline: 0.35rem;
+  }
+}

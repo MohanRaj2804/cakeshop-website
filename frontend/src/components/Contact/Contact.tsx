@@ -1,108 +1,161 @@
-import './Contact.scss';
-import contactBg from '../../assets/bg-img-3.jpg';
+import "./Contact.css";
 
-function Contact() {
+const Contact = () => {
   return (
     <section className="contact-section py-5">
       <div className="container">
+        <div className="row justify-content-center align-items-center">
 
-        <div className="text-center mb-5">
-          <h2 className="display-4 fw-bold premium-title">
-            ✨ Reach Out to Butter Bliss
-          </h2>
-          <p className="lead text-muted">
-            Let’s create something sweet and unforgettable for your special day.
-          </p>
-        </div>
+          <div className="col-lg-10">
 
-        <div className="row justify-content-center">
-          <div className="col-12 col-lg-10">
-            <div className="premium-contact-card">
+            <div className="contact-card">
+
               <div className="row g-0">
 
-                {/* LEFT SIDE WITH IMAGE */}
-                <div
-                  className="col-lg-6 premium-info-section"
-                  style={{
-                    backgroundImage: `url(${contactBg})`
-                  }}
-                >
-                  <div className="overlay"></div>
+                {/* Left Content */}
 
-                  <div className="info-content">
-                    <h3 className="mb-3">Get In Touch</h3>
-                    <p className="mb-4">
-                      Have a custom cake idea? A birthday surprise?
-                      Or just craving something sweet?
-                      We’d love to hear from you!
-                    </p>
+                <div className="col-lg-5 contact-info p-5">
 
-                    <div className="contact-details">
-                      <div className="detail-item">
-                        <i className="bi bi-geo-fill"></i>
-                        <div>
-                          <h6>Address</h6>
-                          <p>8014 Edith Blvd NE, Albuquerque, NY</p>
-                        </div>
-                      </div>
+                  <span className="contact-badge">
+                    Contact Us
+                  </span>
 
-                      <div className="detail-item">
-                        <i className="bi bi-telephone-fill"></i>
-                        <div>
-                          <h6>Phone</h6>
-                          <p>+1 (505) 792-2430</p>
-                        </div>
-                      </div>
+                  <h2 className="contact-title mt-4">
+                    Let's Create Something
+                    <span> Sweet Together</span>
+                  </h2>
 
-                      <div className="detail-item">
-                        <i className="bi bi-envelope-fill"></i>
-                        <div>
-                          <h6>Email</h6>
-                          <p>ButterBliss@gmail.com</p>
-                        </div>
-                      </div>
+                  <p className="contact-description mt-4">
+                    We'd love to hear from you. Whether you have a custom cake
+                    idea, want to place an order, or simply have a question,
+                    we're always happy to help.
+                  </p>
 
-                      <div className="detail-item">
-                        <i className="bi bi-clock-fill"></i>
-                        <div>
-                          <h6>Opening Hours</h6>
-                          <p>Mon – Fri : 9AM – 7PM</p>
-                        </div>
-                      </div>
+                  <div className="contact-details mt-5">
+
+                    <div className="detail-item">
+                      📍 Chennai, Tamil Nadu
                     </div>
+
+                    <div className="detail-item">
+                      📞 +91 98765 43210
+                    </div>
+
+                    <div className="detail-item">
+                      ✉ BB@cakeshop.com
+                    </div>
+
                   </div>
+
                 </div>
 
-                {/* RIGHT FORM */}
-                <div className="col-lg-6 bg-white">
-                  <div className="p-4 p-lg-5">
-                    <h4 className="mb-4 fw-bold">Send Us a Message</h4>
+                {/* Right Form */}
 
-                    <form>
-                      <input className="form-control premium-input mb-3" placeholder="Full Name" required />
-                      <div className="row">
-                        <div className="col-md-6 mb-3">
-                          <input className="form-control premium-input" type="email" placeholder="Email" required />
+                <div className="col-lg-7 p-5">
+
+                  <form>
+
+                    <div className="row">
+
+                      <div className="col-md-6 mb-4">
+
+                        <div className="form-floating">
+
+                          <input
+                            type="text"
+                            className="form-control premium-input"
+                            id="name"
+                            placeholder="Name"
+                          />
+
+                          <label htmlFor="name">
+                            Full Name
+                          </label>
+
                         </div>
-                        <div className="col-md-6 mb-3">
-                          <input className="form-control premium-input" type="tel" placeholder="Phone" />
-                        </div>
+
                       </div>
-                      <input className="form-control premium-input mb-3" placeholder="Subject" required />
-                      <textarea className="form-control premium-input mb-4" rows={4} placeholder="Message" required />
-                      <button className="premium-btn w-100">✉ Send Message</button>
-                    </form>
-                  </div>
+
+                      <div className="col-md-6 mb-4">
+
+                        <div className="form-floating">
+
+                          <input
+                            type="email"
+                            className="form-control premium-input"
+                            id="email"
+                            placeholder="Email"
+                          />
+
+                          <label htmlFor="email">
+                            Email Address
+                          </label>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div className="mb-4">
+
+                      <div className="form-floating">
+
+                        <input
+                          type="text"
+                          className="form-control premium-input"
+                          id="subject"
+                          placeholder="Subject"
+                        />
+
+                        <label htmlFor="subject">
+                          Subject
+                        </label>
+
+                      </div>
+
+                    </div>
+
+                    <div className="mb-4">
+
+                      <div className="form-floating">
+
+                        <textarea
+                          className="form-control premium-input"
+                          id="message"
+                          placeholder="Message"
+                          style={{ height: "180px" }}
+                        ></textarea>
+
+                        <label htmlFor="message">
+                          Your Message
+                        </label>
+
+                      </div>
+
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="btn contact-btn"
+                    >
+                      Send Message →
+                    </button>
+
+                  </form>
+
                 </div>
 
               </div>
-            </div>
-          </div>
-        </div>
 
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Contact;

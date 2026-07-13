@@ -1,0 +1,63 @@
+section h2.display-5 {
+  color: var(--bb-primary);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+}
+
+section p.text-center {
+  color: var(--bb-text);
+  font-size: clamp(1rem, 1.2vw, 1.05rem);
+}
+
+.form-control {
+  border-color: var(--bb-border) !important;
+  color: var(--bb-text);
+  font-size: 1rem;
+  border-radius: 0.95rem;
+  padding: 0.85rem 1rem;
+}
+
+.form-control:focus {
+  border-color: var(--bb-highlight) !important;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+.form-label {
+  color: var(--bb-text);
+}
+
+.btn-clr-3 {
+  background: linear-gradient(135deg, var(--bb-primary), var(--bb-hover));
+  color: var(--bb-secondary);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(93, 64, 55, 0.24);
+}
+
+.btn-clr-3:hover {
+  background: linear-gradient(135deg, var(--bb-highlight), var(--bb-primary));
+  color: var(--bb-text);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(212, 175, 55, 0.28);
+}
+
+.bg-clr-1 {
+  border: 1px solid var(--bb-border) !important;
+  transition: all 0.3s ease;
+}
+
+.bg-clr-1:hover {
+  background-color: var(--bb-primary) !important;
+  color: var(--bb-secondary) !important;
+  border: none !important;
+}
+
+@media (max-width: 575.98px) {
+  .btn-clr-3 {
+    width: 100%;
+  }
+}

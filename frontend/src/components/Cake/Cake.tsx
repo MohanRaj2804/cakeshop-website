@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './Cake.scss';
+import './Cake.css';
 import api from '../../services/api';
 import slide1 from '../../assets/slide_1.jpg';
 import slide2 from '../../assets/slide_2.jpg';
@@ -10,6 +10,7 @@ import RedVelvetCake from '../../assets/Red-Velvet-Cake.jpg';
 import BlackForestCake from '../../assets/Black-Forest-Cake.jpg';
 import RainbowCake from '../../assets/Rainbow-Celebration-Cake.jpg';
 import CookiesCreamCake from '../../assets/Cookies-Cream-Cake.jpg';
+import MangoMagic from '../../assets/Mango-Magic.jpg';
 import { Link } from 'react-router-dom';
 import ChocoBerry from '../../assets/ChocoBerry_Lava_Dome.jpg';
 
@@ -19,7 +20,26 @@ const cakeImages: { [key: string]: string } = {
   "Red Velvet Cake": RedVelvetCake,
   "Black Forest Cake": BlackForestCake,
   "Rainbow Celebration Cake": RainbowCake,
-  "Cookies & Cream Cake": CookiesCreamCake
+  "Cookies & Cream Cake": CookiesCreamCake,
+  "Cookies Cream Cake": CookiesCreamCake,
+  "Mango Magic Cake": MangoMagic,
+  "Mango Magic": MangoMagic
+};
+
+const getCakeImage = (title?: string, fallback?: string) => {
+  if (!title) return fallback;
+
+  const normalizedTitle = title.toLowerCase();
+
+  if (normalizedTitle.includes('mango')) return MangoMagic;
+  if (normalizedTitle.includes('cookies') && normalizedTitle.includes('cream')) return CookiesCreamCake;
+  if (normalizedTitle.includes('rainbow')) return RainbowCake;
+  if (normalizedTitle.includes('chocolate fudge')) return ChocolateFudgeCake;
+  if (normalizedTitle.includes('strawberry')) return StrawberryCreamCake;
+  if (normalizedTitle.includes('red velvet')) return RedVelvetCake;
+  if (normalizedTitle.includes('black forest')) return BlackForestCake;
+
+  return cakeImages[title] || fallback;
 };
 
 interface PriceVariant {
@@ -99,9 +119,10 @@ function Cake() {
       {/* Cakes Section */}
       <section className="py-5 shop-page">
         <div className="container">
-          <div className="text-center mb-5">
-            <h1 className="display-5 fw-bold">✨ Premium Cake Collection</h1>
-            <p className="lead text-muted">
+          <div className="text-center mb-5 cake-intro-card p-4 rounded-4">
+            <span className="section-badge">Signature Collection</span>
+            <h1 className="display-5 fw-bold">Premium Cake Collection</h1>
+            <p className="lead text-muted mb-0">
               Handcrafted happiness for every celebration
             </p>
           </div>
@@ -114,7 +135,7 @@ function Cake() {
                   {/* Image Section */}
                   <div className="image-wrapper">
                     <img
-                      src={cakeImages[cake.title] || cake.image}
+                      src={getCakeImage(cake.title, cake.image)}
                       className="card-img-top"
                       alt={cake.title}
                       style={{ height: "250px", objectFit: "cover" }}
@@ -138,6 +159,7 @@ function Cake() {
                     )}
 
                     {/* Size Selector */}
+                    <label className="form-label small fw-semibold text-muted">Choose a size</label>
                     <select
                       className="form-select mb-3"
                       value={selectedSize[cake._id]}
@@ -155,14 +177,21 @@ function Cake() {
                       ))}
                     </select>
 
-                    {/* Price */}
-                    <h4 className="text-primary fw-bold mb-3">
-                      ₹{selectedSize[cake._id]}
-                    </h4>
+                    <div className="cake-card-footer">
+                      <div className="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                          <p className="text-muted small mb-1">Starting at</p>
+                          <h4 className="text-primary fw-bold mb-0">
+                            ₹{selectedSize[cake._id]}
+                          </h4>
+                        </div>
+                        <span className="price-pill">Premium</span>
+                      </div>
 
-                    <button className="btn btn-dark w-100">
-                      🛒 Buy Now
-                    </button>
+                      <button className="premium-btn w-100">
+                        🛒 Buy Now
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -189,7 +218,7 @@ function Cake() {
 
       {/* RIGHT CONTENT */}
       <div className="col-lg-6">
-        <div className="signature-content">
+        <div className="signature-panel signature-content">
           <h2 className="fw-bold mb-2">
             ChocoBerry Lava Dome
           </h2>
@@ -225,7 +254,7 @@ function Cake() {
           </div>
 
           <Link to="/cake">
-            <button className="signature-btn">
+            <button className="premium-btn">
               ✨ Order Now
             </button>
           </Link>

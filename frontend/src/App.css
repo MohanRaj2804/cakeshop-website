@@ -1,6 +1,115 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background: var(--bb-bg);
+  color: var(--bb-text);
+}
+
+body {
+  background: linear-gradient(135deg, #fffdf8 0%, #fff8f0 100%);
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.28);
+  color: var(--bb-primary);
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.page-section {
+  position: relative;
+}
+
+.section-surface {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(239, 229, 218, 0.95);
+  box-shadow: 0 18px 40px rgba(93, 64, 55, 0.06);
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(248, 187, 208, 0.22);
+  color: var(--bb-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.premium-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 46px;
+  padding: 0.8rem 1.35rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--bb-primary), var(--bb-hover));
+  color: white!important;
+  box-shadow: 0 10px 24px rgba(93, 64, 55, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.premium-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(93, 64, 55, 0.25);
+  background: linear-gradient(135deg, var(--bb-highlight), var(--bb-primary));
+  color: var(--bb-secondary);
+}
+
+.premium-btn--secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--bb-primary);
+  border: 1px solid rgba(93, 64, 55, 0.14);
+  box-shadow: none;
+}
+
+.premium-btn--secondary:hover {
+  background: var(--bb-primary);
+  color: var(--bb-secondary);
+  box-shadow: 0 10px 24px rgba(93, 64, 55, 0.16);
+}
+
+.premium-btn--ghost {
+  background: transparent;
+  color: var(--bb-primary);
+  border: 1px solid rgba(93, 64, 55, 0.16);
+  box-shadow: none;
+}
+
+.premium-btn--ghost:hover {
+  background: rgba(248, 187, 208, 0.16);
+  color: var(--bb-primary);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease both;
 }

@@ -1,0 +1,282 @@
+.bg-image {
+  /* background: radial-gradient(circle at top left, rgba(248, 187, 208, 0.28) 0%, rgba(255, 248, 240, 0.95) 42%, #fffdf8 100%) !important; */
+  background-image: url(../../../src/assets/bg-1.jpg)!important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  text-align: center;
+  padding: clamp(4.2rem, 8vw, 7rem) 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-btn {
+  background: linear-gradient(135deg, var(--bb-primary), var(--bb-hover));
+  color: white!important;
+  border: 1px solid rgba(93, 64, 55, 0.16);
+  box-shadow: 0 12px 24px rgba(93, 64, 55, 0.16);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+/* .premium-btn:hover, */
+.premium-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(93, 64, 55, 0.2);
+  background: linear-gradient(135deg, var(--bb-highlight), var(--bb-accent));
+  color: var(--bb-primary);
+}
+
+.premium-btn--secondary {
+  background: rgba(255, 248, 240, 0.95);
+  color: var(--bb-primary);
+  border: 1px solid rgba(93, 64, 55, 0.16);
+  box-shadow: 0 8px 18px rgba(93, 64, 55, 0.08);
+}
+
+/* .premium-btn--secondary:hover, */
+.premium-btn--secondary:focus-visible {
+  background: linear-gradient(135deg, var(--bb-accent), rgba(255, 248, 240, 0.98));
+  color: var(--bb-primary);
+  border-color: rgba(93, 64, 55, 0.2);
+  box-shadow: 0 12px 24px rgba(93, 64, 55, 0.12);
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.25), transparent 45%, rgba(212,175,55,0.08));
+  pointer-events: none;
+}
+
+.hero-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(0.1rem);
+  -webkit-backdrop-filter: blur(0.1rem);
+  border: 1px solid rgba(239, 229, 218, 0.7);
+  box-shadow: 0 18px 42px rgba(93, 64, 55, 0.08);
+  
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: rgba(248, 187, 208, 0.2);
+  color: var(--bb-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-highlight-card {
+  border-radius: 1.3rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,248,240,0.74));
+  border: 1px solid rgba(239, 229, 218, 0.7);
+  box-shadow: 0 12px 28px rgba(93, 64, 55, 0.06);
+  padding: 1.25rem;
+  text-align: left;
+}
+
+.hero-rating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.16);
+  color: var(--bb-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.hero-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.62rem 0;
+  color: var(--bb-text);
+  border-bottom: 1px solid rgba(239, 229, 218, 0.75);
+}
+
+.hero-feature-item:last-child {
+  border-bottom: none;
+}
+
+.hero-feature-item::before {
+  content: "✦";
+  color: var(--bb-highlight);
+  font-size: 0.95rem;
+}
+
+.bg-image h1 {
+  color: var(--bb-primary);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.bg-image p {
+  color: var(--bb-text);
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.text-color {
+  color: var(--bb-primary);
+  font-weight: 800;
+}
+
+.featured-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.featured-card-wrapper {
+  height: 100%;
+}
+
+.featured-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-bg-clr {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--bb-border);
+  border-radius: 1.2rem;
+  box-shadow: 0 12px 30px rgba(93, 64, 55, 0.06);
+}
+
+.transition-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transition-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 32px rgba(62, 39, 35, 0.15) !important;
+}
+
+.transition-card .fw-bold {
+  font-size: 1.1rem;
+  color: var(--bb-primary);
+}
+
+.cake-imgA {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid var(--bb-border);
+  border-radius: 0.95rem;
+}
+
+.try-now {
+  color: var(--bb-primary);
+  font-weight: 600;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.try-now:hover {
+  color: var(--bb-highlight);
+  gap: 0.4rem !important;
+}
+
+.text-primary {
+  color: var(--bb-highlight) !important;
+}
+
+.accent-divider {
+  width: 90px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bb-highlight), var(--bb-primary));
+  border: none;
+  border-radius: 2px;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--bb-border);
+  border-radius: 1.1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(62, 39, 35, 0.12) !important;
+}
+
+.testimonial-card h4 {
+  color: var(--bb-primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.testimonial-card p {
+  color: var(--bb-text);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 991.98px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bg-image {
+    padding: 4rem 0.9rem;
+  }
+
+  .hero-shell {
+    padding: 1.3rem;
+    border-radius: 1.3rem;
+  }
+
+  .hero-highlight-card {
+    margin-top: 1rem;
+  }
+
+  .bg-image h1 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  .text-color {
+    font-size: 2rem;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-bg-clr {
+    border-radius: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1.25rem;
+  }
+}

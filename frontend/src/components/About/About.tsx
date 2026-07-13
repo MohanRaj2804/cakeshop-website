@@ -1,4 +1,4 @@
-import './About.scss'
+import './About.css'
 import img from '../../assets/about-img.jpg';
 import { Link } from 'react-router-dom';
 function About() {
